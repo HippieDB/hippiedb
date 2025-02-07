@@ -1,0 +1,12 @@
+site_name: HippieDB
+nav:
+  - Home: README.md
+  - Getting Started: getting_started.md
+  - Clients: clients.md
+  - Etiquete: etiquete.md
+  - Guidelines: guidelines.md
+  - Namespaces: namespace.md
+  - Hosting: host.md
+  - FAQ: faq.md
+theme: readthedocs
+

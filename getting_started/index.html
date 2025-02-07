@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Getting Started - HippieDB</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Getting Started";
+        var mkdocs_page_input_path = "getting_started.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> HippieDB
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Getting Started</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#connecting-to-hippiedb">Connecting to HippieDB</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#netcat">Netcat</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-in-python">Example in Python:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#set-key-value">SET key value</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-key">GET key</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#del-key">DEL key</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#incr-key-value">INCR key [value]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#decr-key-value">DECR key [value]</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stop">STOP</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rules-of-the-road">Rules of the Road</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-session">Example Session</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tips-for-groovy-development">Tips for Groovy Development</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#running-locally">Running locally</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#need-help">Need Help?</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../clients/">Clients</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../etiquete/">Etiquete</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Guidelines</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../namespace/">Namespaces</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../host/">Hosting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">HippieDB</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Getting Started</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="getting-started-with-hippiedb">Getting Started with HippieDB 🌈</h1>
+<hr />
+<p>Welcome to HippieDB, the free-spirited, cloud-based database that’s all about simplicity, sharing, and good vibes.
+Whether you’re a seasoned developer or just starting your journey, HippieDB is here to make your life easier, no complex setups, no permissions, no storage hassles. Just pure, unadulterated data sharing. Let’s dive in!</p>
+<hr />
+<h2 id="connecting-to-hippiedb"><strong>Connecting to HippieDB</strong></h2>
+<p>HippieDB is as easy to connect to as a handshake at a music festival. All you need is a TCP client, and you’re good to go. Here’s how:</p>
+<p>Open a TCP connection to the HippieDB server at <strong>hippiedb.groovy.ch</strong> on port <strong>1970</strong>.</p>
+<p>Start sending commands. No authentication, no users, no passwords, just connect and vibe.</p>
+<h3 id="netcat">Netcat</h3>
+<pre><code>nc hippiedb.groovy.ch 1970
+set mykey myvalue
+get myKey
+stop
+</code></pre>
+<h3 id="example-in-python">Example in Python:</h3>
+<pre><code class="language-python">import socket
+
+# Connect to HippieDB
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect(('hippiedb.groovy.ch', 1970))
+
+# Send commands and receive responses
+client_socket.send(b'set mykey myvalue\n')
+response = client_socket.recv(1024)
+print(response.decode())
+
+# Close the connection when done
+client_socket.send(b'stop\n')
+client_socket.close()
+</code></pre>
+<p>You can find more <a href="../clients/">client examples here.</a>    </p>
+<hr />
+<h2 id="commands"><strong>Commands</strong></h2>
+<p>HippieDB keeps it simple with just a handful of commands. Here’s the full list:</p>
+<h3 id="set-key-value"><strong>SET key value</strong></h3>
+<p>Stores a value under a key.</p>
+<p>Keys and values must not contain spaces (keep it simple, man).</p>
+<p>Example: </p>
+<pre><code>set groovy peace
+Response: OK
+</code></pre>
+<h3 id="get-key"><strong>GET key</strong></h3>
+<p>Retrieves the value stored under a key.</p>
+<p>Example: </p>
+<pre><code>get groovy
+Response: peace
+</code></pre>
+<h3 id="del-key"><strong>DEL key</strong></h3>
+<p>Deletes a key and its value.</p>
+<p>Example: </p>
+<pre><code>del groovy
+Response: OK
+</code></pre>
+<h3 id="incr-key-value"><strong>INCR key [value]</strong></h3>
+<p>Increments the numeric value of a key by the specified [value]. If the [value] is not provided, it defaults to 1. If the key doesn’t exist, it starts at 0.</p>
+<p>Examples:</p>
+<p>Increment by 1 (default):</p>
+<pre><code>incr counter
+Response: 1
+</code></pre>
+<p>Increment by a specific value:</p>
+<pre><code>incr vibe 10
+Response: 10
+</code></pre>
+<h3 id="decr-key-value"><strong>DECR key [value]</strong></h3>
+<p>Decrements the numeric value of a key by the specified [value]. If the [value] is not provided, it defaults to 1. If the key doesn’t exist, it starts at 0.</p>
+<p>Examples: </p>
+<p>Decrement by 1 (default):</p>
+<pre><code>decr counter
+Response: -1
+</code></pre>
+<p>Decrement by a specific value:</p>
+<pre><code>decr vibe 2
+Response: 8
+</code></pre>
+<h3 id="stop"><strong>STOP</strong></h3>
+<p>Closes the session and disconnects from HippieDB. Use this when you’re done sharing the vibes.</p>
+<p>Example: </p>
+<pre><code>stop
+Response: BYE (and the connection closes)
+</code></pre>
+<hr />
+<h2 id="rules-of-the-road"><strong>Rules of the Road</strong></h2>
+<ul>
+<li>No spaces in keys. Keep it simple, man. Use underscores or dashes if you need separation.</li>
+<li>No permanent storage. HippieDB is ephemeral, like a sunset or a campfire. Enjoy the moment.</li>
+<li>Be cool. HippieDB is shared by everyone, so don’t abuse it. Respect others’ keys and keep the vibes positive.</li>
+</ul>
+<h3 id="example-session">Example Session</h3>
+<p>Here’s what a typical HippieDB session might look like:</p>
+<pre><code>&gt; set vibe peace
+OK
+
+&gt; get vibe
+peace
+
+&gt; incr counter
+1
+
+&gt; incr counter
+2
+
+&gt; decr counter
+1
+
+&gt; del vibe
+OK
+
+&gt; stop
+BYE
+</code></pre>
+<hr />
+<h2 id="tips-for-groovy-development"><strong>Tips for Groovy Development</strong></h2>
+<ul>
+<li>Keep it simple. HippieDB is designed for lightweight, fast, and fun use cases. Don’t overcomplicate it.</li>
+<li>Share the love. If you build something cool with HippieDB, share it with the community. Spread the good vibes!</li>
+<li>Embrace impermanence. If your data disappears, it’s a reminder to live in the now. Let it go, man.</li>
+</ul>
+<hr />
+<h2 id="running-locally"><strong>Running locally</strong></h2>
+<p>You can run your own database on your computer or host your own HippieDB Server. See the <a href="../host/">hosting guide</a> for details.</p>
+<hr />
+<h2 id="need-help"><strong>Need Help?</strong></h2>
+<p>If you’re feeling lost, just take a deep breath and remember: HippieDB is all about simplicity and good vibes. If you still need help, send some positive energy into the universe, and the answers will come. Or, you know, check the FAQ for more groovy guidance.</p>
+<p>Now go forth and build something amazing with HippieDB! Whether it’s a collaborative art project, a game, or just a place to store your favorite quotes, HippieDB is here to help you keep the vibes alive. Peace, love, and happy coding! ✌️</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../clients/" class="btn btn-neutral float-right" title="Clients">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../clients/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

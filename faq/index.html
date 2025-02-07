@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>FAQ - HippieDB</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "FAQ";
+        var mkdocs_page_input_path = "faq.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> HippieDB
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Getting Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../clients/">Clients</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../etiquete/">Etiquete</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../guidelines/">Guidelines</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../namespace/">Namespaces</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../host/">Hosting</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">FAQ</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-support-permanent-storage">Q: Does HippieDB support permanent storage?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-create-multiple-databases-in-hippiedb">Q: Can I create multiple databases in HippieDB?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-how-do-i-manage-users-and-permissions-in-hippiedb">Q: How do I manage users and permissions in HippieDB?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-what-happens-if-someone-abuses-the-database">Q: What happens if someone abuses the database?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-spaces-in-my-keys-or-values">Q: Can I use spaces in my keys or values?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-support-pub-sub-or-real-time-messaging">Q: Does HippieDB support pub-sub or real-time messaging?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-how-do-i-back-up-my-data-in-hippiedb">Q: How do I back up my data in HippieDB?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-mission-critical-applications">Q: Can I use HippieDB for mission-critical applications?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-what-happens-if-the-database-gets-full">Q: What happens if the database gets full?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-how-do-i-connect-to-hippiedb">Q: How do I connect to HippieDB?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-support-transactions">Q: Does HippieDB support transactions?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-analytics-or-big-data">Q: Can I use HippieDB for analytics or big data?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-what-happens-if-two-people-try-to-update-the-same-key-at-the-same-time">Q: What happens if two people try to update the same key at the same time?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-have-a-query-language">Q: Does HippieDB have a query language?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-offline">Q: Can I use HippieDB offline?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-support-encryption">Q: Does HippieDB support encryption?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-caching">Q: Can I use HippieDB for caching?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-what-happens-if-i-accidentally-delete-a-key">Q: What happens if I accidentally delete a key?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-machine-learning">Q: Can I use HippieDB for machine learning?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-have-a-community-or-support-forum">Q: Does HippieDB have a community or support forum?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-financial-transactions">Q: Can I use HippieDB for financial transactions?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-have-a-limit-on-key-or-value-size">Q: Does HippieDB have a limit on key or value size?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-to-build-a-social-network">Q: Can I use HippieDB to build a social network?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-what-happens-if-the-server-goes-down">Q: What happens if the server goes down?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-logging">Q: Can I use HippieDB for logging?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-support-clustering-or-replication">Q: Does HippieDB support clustering or replication?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-gaming">Q: Can I use HippieDB for gaming?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-what-happens-if-i-forget-a-key-i-set">Q: What happens if I forget a key I set?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-iot-devices">Q: Can I use HippieDB for IoT devices?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-have-a-roadmap-for-new-features">Q: Does HippieDB have a roadmap for new features?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-time-series-data">Q: Can I use HippieDB for time-series data?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-have-a-mobile-sdk">Q: Does HippieDB have a mobile SDK?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-session-storage">Q: Can I use HippieDB for session storage?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-what-happens-if-someone-sets-a-key-i-was-using">Q: What happens if someone sets a key I was using?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-geolocation-data">Q: Can I use HippieDB for geolocation data?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-have-a-rest-api">Q: Does HippieDB have a REST API?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-multiplayer-game-state">Q: Can I use HippieDB for multiplayer game state?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-what-happens-if-i-set-a-key-with-a-really-long-value">Q: What happens if I set a key with a really long value?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-ai-training-data">Q: Can I use HippieDB for AI training data?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-have-a-mascot">Q: Does HippieDB have a mascot?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-blockchain">Q: Can I use HippieDB for blockchain?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-support-json">Q: Does HippieDB support JSON?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-a-voting-system">Q: Can I use HippieDB for a voting system?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-what-happens-if-i-set-a-key-with-no-value">Q: What happens if I set a key with no value?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-a-recommendation-engine">Q: Can I use HippieDB for a recommendation engine?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-have-a-command-line-interface">Q: Does HippieDB have a command-line interface?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-a-weather-app">Q: Can I use HippieDB for a weather app?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-what-happens-if-i-set-a-key-with-a-negative-value">Q: What happens if I set a key with a negative value?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-can-i-use-hippiedb-for-a-music-playlist-app">Q: Can I use HippieDB for a music playlist app?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q-does-hippiedb-have-a-theme-song">Q: Does HippieDB have a theme song?</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">HippieDB</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">FAQ</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="faq-hippiedb-the-grooviest-database-in-the-cloud">FAQ: HippieDB – The Grooviest Database in the Cloud 🌈✌️</h1>
+<hr />
+<h2 id="q-does-hippiedb-support-permanent-storage"><strong>Q: Does HippieDB support permanent storage?</strong></h2>
+<p><strong>A:</strong> Permanent storage? Whoa, man, that’s like trying to hold onto a sunset. HippieDB believes in living in the moment, no storage, no baggage. If you need something to last forever, maybe ask yourself why you’re so attached to material things. Let it flow, dude.</p>
+<h2 id="q-can-i-create-multiple-databases-in-hippiedb"><strong>Q: Can I create multiple databases in HippieDB?</strong></h2>
+<p><strong>A:</strong> Multiple databases? That’s like building walls in a commune, man. HippieDB is all about unity, one shared space for everyone. No divisions, no borders. Just one big, happy, global database where we all vibe together.</p>
+<h2 id="q-how-do-i-manage-users-and-permissions-in-hippiedb"><strong>Q: How do I manage users and permissions in HippieDB?</strong></h2>
+<p><strong>A:</strong> Users? Permissions? That’s the Man’s way of controlling you, man. In HippieDB, we trust each other. No logins, no passwords, no gatekeepers. Just pure, unadulterated sharing. Be cool, don’t mess with other people’s keys, and peace will prevail.</p>
+<h2 id="q-what-happens-if-someone-abuses-the-database"><strong>Q: What happens if someone abuses the database?</strong></h2>
+<p><strong>A:</strong> Abuse? That’s a bummer, man. But hey, HippieDB is all about good vibes and positive energy. If someone’s being a downer, just send them some love and maybe a gentle reminder to chill out. The universe has a way of balancing things out.</p>
+<h2 id="q-can-i-use-spaces-in-my-keys-or-values"><strong>Q: Can I use spaces in my keys or values?</strong></h2>
+<p><strong>A:</strong> Spaces? Nah, man, spaces are an illusion. In HippieDB, we keep it simple, no spaces, no tabs, no drama. Just pure, unbroken strings of good vibes. If you need a space, just imagine it’s there. It’s all in your mind, dude.</p>
+<h2 id="q-does-hippiedb-support-pub-sub-or-real-time-messaging"><strong>Q: Does HippieDB support pub-sub or real-time messaging?</strong></h2>
+<p><strong>A:</strong> Pub-sub? Real-time? That sounds like a lot of work, man. HippieDB keeps it chill with <code>get</code>, <code>set</code>, <code>del</code>, <code>incr</code>, and <code>decr</code>. If you want real-time messaging, use your imagination and some client-side magic. Creativity is the ultimate feature, man.</p>
+<h2 id="q-how-do-i-back-up-my-data-in-hippiedb"><strong>Q: How do I back up my data in HippieDB?</strong></h2>
+<p><strong>A:</strong> Backups? That’s like trying to bottle a rainbow, man. HippieDB is ephemeral, just like life. If your data disappears, maybe it was never meant to stay. Embrace the impermanence and let go of your attachment to material things.</p>
+<h2 id="q-can-i-use-hippiedb-for-mission-critical-applications"><strong>Q: Can I use HippieDB for mission-critical applications?</strong></h2>
+<p><strong>A:</strong> Mission-critical? Whoa, that sounds stressful, man. HippieDB is more about chilling out and enjoying the ride. If your app can’t handle a little unpredictability, maybe it needs to take a deep breath and find its inner peace.</p>
+<h2 id="q-what-happens-if-the-database-gets-full"><strong>Q: What happens if the database gets full?</strong></h2>
+<p><strong>A:</strong> Full? That’s a capitalist concept, man. HippieDB doesn’t believe in limits. If things get heavy, just let go of what you don’t need. The universe will make space for new vibes. Trust the flow, dude.</p>
+<h2 id="q-how-do-i-connect-to-hippiedb"><strong>Q: How do I connect to HippieDB?</strong></h2>
+<p><strong>A:</strong> Connecting is easy, man. Just open your heart (and a TCP socket) and let the good vibes flow. No complicated setup, no corporate nonsense. Just pure, unadulterated connection. Peace, love, and TCP, baby.</p>
+<h2 id="q-does-hippiedb-support-transactions"><strong>Q: Does HippieDB support transactions?</strong></h2>
+<p><strong>A:</strong> Transactions? That’s like trying to plan every step of your journey, man. HippieDB is all about going with the flow. If you need atomicity, just close your eyes, take a deep breath, and trust that everything will work out. Or, you know, use <code>get</code> and <code>set</code> creatively. Peace, man.</p>
+<h2 id="q-can-i-use-hippiedb-for-analytics-or-big-data"><strong>Q: Can I use HippieDB for analytics or big data?</strong></h2>
+<p><strong>A:</strong> Big data? That sounds like a lot of numbers, man. HippieDB is more about the feeling of data, not the crunching. If you’re drowning in spreadsheets, maybe take a break, light some incense, and remember why you started. Less data, more soul.</p>
+<h2 id="q-what-happens-if-two-people-try-to-update-the-same-key-at-the-same-time"><strong>Q: What happens if two people try to update the same key at the same time?</strong></h2>
+<p><strong>A:</strong> Whoa, that’s a cosmic collision, man. HippieDB doesn’t lock you into rigid rules, it’s a free spirit. Whoever’s vibes are stronger in that moment will win. If you’re worried about it, just send some good energy to the other person and hope they’re cool about it.</p>
+<h2 id="q-does-hippiedb-have-a-query-language"><strong>Q: Does HippieDB have a query language?</strong></h2>
+<p><strong>A:</strong> Query language? That’s like trying to put a flower in a spreadsheet, man. HippieDB keeps it simple: <code>get</code>, <code>set</code>, <code>del</code>, <code>incr</code>, and <code>decr</code>. If you need more, just meditate on it. The answers are already within you.</p>
+<h2 id="q-can-i-use-hippiedb-offline"><strong>Q: Can I use HippieDB offline?</strong></h2>
+<p><strong>A:</strong> Offline? That’s like trying to hug a tree without the tree, man. HippieDB lives in the cloud, where the vibes are pure and the connections are eternal. If you’re offline, maybe it’s a sign to unplug and enjoy the real world for a while.</p>
+<h2 id="q-does-hippiedb-support-encryption"><strong>Q: Does HippieDB support encryption?</strong></h2>
+<p><strong>A:</strong> Encryption? That’s like putting a lock on your soul, man. HippieDB believes in openness and trust. If you’re worried about security, just send some positive energy to the universe and trust that no one will mess with your keys. Peace is the best encryption.</p>
+<h2 id="q-can-i-use-hippiedb-for-caching"><strong>Q: Can I use HippieDB for caching?</strong></h2>
+<p><strong>A:</strong> Caching? Sure, man, but remember: nothing lasts forever. HippieDB is perfect for caching if you’re cool with things being temporary. If your cache disappears, just think of it as the universe reminding you to live in the now.</p>
+<h2 id="q-what-happens-if-i-accidentally-delete-a-key"><strong>Q: What happens if I accidentally delete a key?</strong></h2>
+<p><strong>A:</strong> Oops, man, that’s a bummer. But hey, in HippieDB, deletion is just another form of letting go. If you really need that key back, maybe it’s a sign to start fresh. Embrace the impermanence and create something even groovier.</p>
+<h2 id="q-can-i-use-hippiedb-for-machine-learning"><strong>Q: Can I use HippieDB for machine learning?</strong></h2>
+<p><strong>A:</strong> Machine learning? That sounds like a lot of brainpower, man. HippieDB is more about heart power. If you’re training models, maybe take a break and train your soul instead. A little meditation can go a long way.</p>
+<h2 id="q-does-hippiedb-have-a-community-or-support-forum"><strong>Q: Does HippieDB have a community or support forum?</strong></h2>
+<p><strong>A:</strong> Community? That’s what you’re building right now, man. HippieDB doesn’t need a forum, it’s all about the connections you make. If you have questions, just send them out into the universe and trust that someone will vibe with you. Or, you know, email us. Peace and love, always.</p>
+<h2 id="q-can-i-use-hippiedb-for-financial-transactions"><strong>Q: Can I use HippieDB for financial transactions?</strong></h2>
+<p><strong>A:</strong> Financial transactions? Whoa, that’s heavy, man. HippieDB is more about sharing good vibes than tracking dollars. If you’re using it for money, maybe ask yourself why you’re letting capitalism control your life. Trade in hugs instead, they’re worth more anyway.</p>
+<h2 id="q-does-hippiedb-have-a-limit-on-key-or-value-size"><strong>Q: Does HippieDB have a limit on key or value size?</strong></h2>
+<p><strong>A:</strong> Limits? That’s like trying to put a fence around the ocean, man. HippieDB doesn’t believe in limits, just keep your keys and values reasonable. If they get too big, maybe it’s a sign to simplify your life. Less is more, dude.</p>
+<h2 id="q-can-i-use-hippiedb-to-build-a-social-network"><strong>Q: Can I use HippieDB to build a social network?</strong></h2>
+<p><strong>A:</strong> A social network? Sure, man, but remember: HippieDB is about connection, not likes or followers. If you’re building a social network, make it about sharing love, not data. And don’t forget to include a “send good vibes” button.</p>
+<h2 id="q-what-happens-if-the-server-goes-down"><strong>Q: What happens if the server goes down?</strong></h2>
+<p><strong>A:</strong> The server goes down? That’s just the universe telling you to take a break, man. HippieDB is all about impermanence. If it’s down, go outside, hug a tree, and remember that everything comes back when the time is right.</p>
+<h2 id="q-can-i-use-hippiedb-for-logging"><strong>Q: Can I use HippieDB for logging?</strong></h2>
+<p><strong>A:</strong> Logging? That’s like trying to document every step of your journey, man. HippieDB is more about living in the moment. If you really need logs, just write them down on a piece of paper and burn it afterward. Let it go, dude.</p>
+<h2 id="q-does-hippiedb-support-clustering-or-replication"><strong>Q: Does HippieDB support clustering or replication?</strong></h2>
+<p><strong>A:</strong> Clustering? Replication? That sounds like a lot of work, man. HippieDB is all about simplicity. If you need more power, just gather some friends, light a fire, and share the load. Together, we’re stronger.</p>
+<h2 id="q-can-i-use-hippiedb-for-gaming"><strong>Q: Can I use HippieDB for gaming?</strong></h2>
+<p><strong>A:</strong> Gaming? Sure, man, but remember: HippieDB is about fun, not competition. If you’re building a game, make it cooperative, not cutthroat. And don’t forget to include a “chill mode” where everyone just hangs out and vibes.</p>
+<h2 id="q-what-happens-if-i-forget-a-key-i-set"><strong>Q: What happens if I forget a key I set?</strong></h2>
+<p><strong>A:</strong> Forgot a key? That’s like losing your way on a hike, man. Don’t stress, just take a deep breath and trust that the universe will guide you back. Or, you know, set a reminder next time. Peace is the key.</p>
+<h2 id="q-can-i-use-hippiedb-for-iot-devices"><strong>Q: Can I use HippieDB for IoT devices?</strong></h2>
+<p><strong>A:</strong> IoT? That’s a lot of gadgets, man. HippieDB is more about connecting people, not things. If you’re using it for IoT, make sure your devices are spreading good vibes, not just data. A smart toaster that sends love? Now that’s innovation.</p>
+<h2 id="q-does-hippiedb-have-a-roadmap-for-new-features"><strong>Q: Does HippieDB have a roadmap for new features?</strong></h2>
+<p><strong>A:</strong> A roadmap? That’s like trying to plan a road trip without leaving room for detours, man. HippieDB doesn’t believe in roadmaps, it believes in going where the wind takes it. If a new feature feels right, it’ll happen. Until then, just enjoy the ride.</p>
+<h2 id="q-can-i-use-hippiedb-for-time-series-data"><strong>Q: Can I use HippieDB for time-series data?</strong></h2>
+<p><strong>A:</strong> Time-series? That’s like trying to capture every grain of sand in an hourglass, man. HippieDB is all about living in the now. If you’re tracking time, maybe take a moment to breathe and appreciate the present. The past is gone, the future’s a mystery, and the now is all we’ve got.</p>
+<h2 id="q-does-hippiedb-have-a-mobile-sdk"><strong>Q: Does HippieDB have a mobile SDK?</strong></h2>
+<p><strong>A:</strong> Mobile SDK? That sounds like a lot of code, man. HippieDB is all about simplicity, just connect over TCP and let the good vibes flow. If you’re on the go, take HippieDB with you in your heart, not just your phone.</p>
+<h2 id="q-can-i-use-hippiedb-for-session-storage"><strong>Q: Can I use HippieDB for session storage?</strong></h2>
+<p><strong>A:</strong> Session storage? Sure, man, but remember: HippieDB is ephemeral, just like a good conversation around a campfire. If your session data disappears, maybe it’s a sign to start fresh. Every moment is a new beginning, dude.</p>
+<h2 id="q-what-happens-if-someone-sets-a-key-i-was-using"><strong>Q: What happens if someone sets a key I was using?</strong></h2>
+<p><strong>A:</strong> Whoa, that’s a cosmic clash, man. HippieDB doesn’t believe in ownership, it’s all about sharing. If someone overwrites your key, just send them some love and maybe a friendly reminder to check before they set. Peaceful coexistence is the way.</p>
+<h2 id="q-can-i-use-hippiedb-for-geolocation-data"><strong>Q: Can I use HippieDB for geolocation data?</strong></h2>
+<p><strong>A:</strong> Geolocation? That’s like trying to map the stars, man. HippieDB doesn’t care where you are, it cares about the vibes you’re sending. If you’re tracking locations, make sure you’re also tracking the good energy you’re spreading.</p>
+<h2 id="q-does-hippiedb-have-a-rest-api"><strong>Q: Does HippieDB have a REST API?</strong></h2>
+<p><strong>A:</strong> REST API? That’s like putting a suit on a flower, man. HippieDB is raw and natural, just connect over TCP and let the vibes flow. If you need REST, maybe take a nap and rethink your life choices. Simplicity is key.</p>
+<h2 id="q-can-i-use-hippiedb-for-multiplayer-game-state"><strong>Q: Can I use HippieDB for multiplayer game state?</strong></h2>
+<p><strong>A:</strong> Multiplayer game state? Sure, man, but remember: HippieDB is about fun, not competition. If you’re building a game, make it about collaboration, not conflict. And don’t forget to include a “group hug” button for when things get intense.</p>
+<h2 id="q-what-happens-if-i-set-a-key-with-a-really-long-value"><strong>Q: What happens if I set a key with a really long value?</strong></h2>
+<p><strong>A:</strong> A really long value? That’s like trying to write a novel on a grain of rice, man. HippieDB doesn’t judge, but maybe ask yourself if you really need all that data. Keep it simple, keep it groovy.</p>
+<h2 id="q-can-i-use-hippiedb-for-ai-training-data"><strong>Q: Can I use HippieDB for AI training data?</strong></h2>
+<p><strong>A:</strong> AI training? That sounds like a lot of brainpower, man. HippieDB is more about heart power. If you’re training AI, make sure it’s learning love, not just logic. A compassionate algorithm is the future, dude.</p>
+<h2 id="q-does-hippiedb-have-a-mascot"><strong>Q: Does HippieDB have a mascot?</strong></h2>
+<p><strong>A:</strong> A mascot? Absolutely, man. It’s a tie-dye llama named Groovy Gus. He roams the cloud, spreading good vibes and reminding everyone to share the database with love. If you see him in your dreams, you’re doing it right.</p>
+<h2 id="q-can-i-use-hippiedb-for-blockchain"><strong>Q: Can I use HippieDB for blockchain?</strong></h2>
+<p><strong>A:</strong> Blockchain? That’s like trying to put a leash on a rainbow, man. HippieDB is all about trust and sharing, not ledgers and miners. If you’re into blockchain, maybe ask yourself why you need so much proof. Just trust the vibes, dude.</p>
+<h2 id="q-does-hippiedb-support-json"><strong>Q: Does HippieDB support JSON?</strong></h2>
+<p><strong>A:</strong> JSON? That’s like putting a flower in a spreadsheet, man. HippieDB keeps it simple, no fancy formats, just strings. If you need JSON, just imagine it’s there. It’s all in your mind, man.</p>
+<h2 id="q-can-i-use-hippiedb-for-a-voting-system"><strong>Q: Can I use HippieDB for a voting system?</strong></h2>
+<p><strong>A:</strong> Voting? Sure, man, but remember: HippieDB is about unity, not division. If you’re building a voting system, make it about consensus, not competition. And don’t forget to include a “group hug” option for tie-breakers.</p>
+<h2 id="q-what-happens-if-i-set-a-key-with-no-value"><strong>Q: What happens if I set a key with no value?</strong></h2>
+<p><strong>A:</strong> A key with no value? That’s like a guitar with no strings, man. HippieDB believes in balance, every key deserves a value. If you’re setting empty keys, maybe it’s a sign to fill your own life with meaning first.</p>
+<h2 id="q-can-i-use-hippiedb-for-a-recommendation-engine"><strong>Q: Can I use HippieDB for a recommendation engine?</strong></h2>
+<p><strong>A:</strong> Recommendations? Sure, man, but remember: HippieDB is about intuition, not algorithms. If you’re building a recommendation engine, make it about vibes, not data. Sometimes the best recommendations come from the heart, not the cloud.</p>
+<h2 id="q-does-hippiedb-have-a-command-line-interface"><strong>Q: Does HippieDB have a command-line interface?</strong></h2>
+<p><strong>A:</strong> Command-line? That’s like trying to meditate with a megaphone, man. HippieDB is all about simplicity, just connect over TCP and let the vibes flow. If you need a CLI, maybe take a walk in nature and rethink your approach.</p>
+<h2 id="q-can-i-use-hippiedb-for-a-weather-app"><strong>Q: Can I use HippieDB for a weather app?</strong></h2>
+<p><strong>A:</strong> Weather? Sure, man, but remember: HippieDB is about feeling the weather, not just predicting it. If you’re building a weather app, make it about connecting people to nature, not just numbers. And don’t forget to include a “chill mode” for sunny days.</p>
+<h2 id="q-what-happens-if-i-set-a-key-with-a-negative-value"><strong>Q: What happens if I set a key with a negative value?</strong></h2>
+<p><strong>A:</strong> Negative values? That’s like bringing clouds to a sunny day, man. HippieDB believes in positivity, keep your values upbeat. If you’re setting negatives, maybe it’s time to meditate and realign your energy.</p>
+<h2 id="q-can-i-use-hippiedb-for-a-music-playlist-app"><strong>Q: Can I use HippieDB for a music playlist app?</strong></h2>
+<p><strong>A:</strong> Music playlists? Absolutely, man. HippieDB is all about good vibes and good tunes. If you’re building a playlist app, make it about sharing the love, not just the beats. And don’t forget to include a “jam session” mode.</p>
+<h2 id="q-does-hippiedb-have-a-theme-song"><strong>Q: Does HippieDB have a theme song?</strong></h2>
+<p><strong>A:</strong> A theme song? You bet, man. It’s called <em>“Clouds in My Database”</em> by the imaginary band <strong>The Free Spirits</strong>. It’s a mix of acoustic guitar, bongos, and the sound of the wind blowing through the server racks. If you listen closely, you can hear Groovy Gus the llama humming along. 🎶</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../host/" class="btn btn-neutral float-left" title="Hosting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../host/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

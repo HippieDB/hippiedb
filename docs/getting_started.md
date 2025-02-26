@@ -48,7 +48,7 @@ HippieDB keeps it simple with just a handful of commands. Here’s the full list
 ###  **SET key value**
 Stores a value under a key.
 
-Keys and values must not contain spaces (keep it simple, man).
+Keys must not contain spaces (keep it simple, man).
 
 Example: 
 

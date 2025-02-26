@@ -56,7 +56,7 @@ Here's an interactive client in Javascript
 
     const client = new net.Socket();
     const host = args[0] || 'hippiedb.groovy.ch';
-    const port = parseInt(args[1]) || 9669;
+    const port = parseInt(args[1]) || 1970;
 
     client.connect(port, host, () => {
         console.log('Connected to server');
@@ -91,11 +91,11 @@ Here's an interactive client in Kotlin/JVM
 
     object SocketClient {
         private val log = LoggerFactory.getLogger("SocketClient")
-        private const val DEFAULT_PORT = 9669
+        private const val DEFAULT_PORT = 1970
 
         @JvmStatic
         fun main(args: Array<String>) = runBlocking {
-            val host = args.getOrNull(0) ?: "localhost"
+            val host = args.getOrNull(0) ?: "hippiedb.groovy.ch"
             val port = args.getOrNull(1)?.toIntOrNull() ?: DEFAULT_PORT
 
             try {
@@ -139,7 +139,7 @@ Here’s a simple Ruby script to interact with the server:
 
     require 'socket'
 
-    client = TCPSocket.new('localhost', 1970)
+    client = TCPSocket.new('hippiedb.groovy.ch', 1970)
     client.puts "SET mykey myvalue"
     response = client.gets
     puts response
@@ -160,7 +160,7 @@ Here’s a simple Go code to interact with the server:
     )
 
     func main() {
-        conn, err := net.Dial("tcp", "localhost:1970")
+        conn, err := net.Dial("tcp", "hippiedb.groovy.ch:1970")
         if err != nil {
             fmt.Println("Error connecting:", err)
             return
@@ -181,7 +181,7 @@ Here’s a simple Go code to interact with the server:
 ## PowerShell
 If you're on Windows, you can use PowerShell to interact with the server.
 
-    $socket = New-Object System.Net.Sockets.TcpClient('localhost', 1970)
+    $socket = New-Object System.Net.Sockets.TcpClient('hippiedb.groovy.ch', 1970)
     $stream = $socket.GetStream()
     $writer = New-Object System.IO.StreamWriter($stream)
     $reader = New-Object System.IO.StreamReader($stream)
@@ -202,8 +202,8 @@ If you're on Windows, you can use PowerShell to interact with the server.
 ## Bash with /dev/tcp
 Bash has a built-in way to interact with TCP servers using /dev/tcp.
 
-    exec 3<>/dev/tcp/localhost/9669
-    echo -e "SET mykey myvalue\n" >&3
+    exec 3<>/dev/tcp/hippiedb.groovy.ch/1970
+    echo -e "SET mykey myvalue" >&3
     cat <&3
     exec 3>&-
 
@@ -221,10 +221,10 @@ Socat is a powerful networking tool similar to Netcat.
 
 Send a command:
 
-    echo -e "SET mykey myvalue\n" | socat - TCP:localhost:1970
+    echo -e "SET mykey myvalue\n" | socat - TCP:hippiedb.groovy.ch:1970
 
 Interactive session:
 
-    socat - TCP:localhost:1970
+    socat - TCP:hippiedb.groovy.ch:1970
 
 ---

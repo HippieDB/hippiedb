@@ -157,7 +157,7 @@ const args = process.argv.slice(2);
 
 const client = new net.Socket();
 const host = args[0] || 'hippiedb.groovy.ch';
-const port = parseInt(args[1]) || 9669;
+const port = parseInt(args[1]) || 1970;
 
 client.connect(port, host, () =&gt; {
     console.log('Connected to server');
@@ -189,11 +189,11 @@ import java.net.*
 
 object SocketClient {
     private val log = LoggerFactory.getLogger("SocketClient")
-    private const val DEFAULT_PORT = 9669
+    private const val DEFAULT_PORT = 1970
 
     @JvmStatic
     fun main(args: Array&lt;String&gt;) = runBlocking {
-        val host = args.getOrNull(0) ?: "localhost"
+        val host = args.getOrNull(0) ?: "hippiedb.groovy.ch"
         val port = args.getOrNull(1)?.toIntOrNull() ?: DEFAULT_PORT
 
         try {
@@ -235,7 +235,7 @@ object SocketClient {
 <p>Here’s a simple Ruby script to interact with the server:</p>
 <pre><code>require 'socket'
 
-client = TCPSocket.new('localhost', 1970)
+client = TCPSocket.new('hippiedb.groovy.ch', 1970)
 client.puts "SET mykey myvalue"
 response = client.gets
 puts response
@@ -254,7 +254,7 @@ import (
 )
 
 func main() {
-    conn, err := net.Dial("tcp", "localhost:1970")
+    conn, err := net.Dial("tcp", "hippiedb.groovy.ch:1970")
     if err != nil {
         fmt.Println("Error connecting:", err)
         return
@@ -273,7 +273,7 @@ func main() {
 <hr />
 <h2 id="powershell">PowerShell</h2>
 <p>If you're on Windows, you can use PowerShell to interact with the server.</p>
-<pre><code>$socket = New-Object System.Net.Sockets.TcpClient('localhost', 1970)
+<pre><code>$socket = New-Object System.Net.Sockets.TcpClient('hippiedb.groovy.ch', 1970)
 $stream = $socket.GetStream()
 $writer = New-Object System.IO.StreamWriter($stream)
 $reader = New-Object System.IO.StreamReader($stream)
@@ -292,8 +292,8 @@ $socket.Close()
 <hr />
 <h2 id="bash-with-devtcp">Bash with /dev/tcp</h2>
 <p>Bash has a built-in way to interact with TCP servers using /dev/tcp.</p>
-<pre><code>exec 3&lt;&gt;/dev/tcp/localhost/9669
-echo -e "SET mykey myvalue\n" &gt;&amp;3
+<pre><code>exec 3&lt;&gt;/dev/tcp/hippiedb.groovy.ch/1970
+echo -e "SET mykey myvalue" &gt;&amp;3
 cat &lt;&amp;3
 exec 3&gt;&amp;-
 </code></pre>
@@ -308,10 +308,10 @@ exec 3&gt;&amp;-
 <h2 id="socat">Socat</h2>
 <p>Socat is a powerful networking tool similar to Netcat.</p>
 <p>Send a command:</p>
-<pre><code>echo -e "SET mykey myvalue\n" | socat - TCP:localhost:1970
+<pre><code>echo -e "SET mykey myvalue\n" | socat - TCP:hippiedb.groovy.ch:1970
 </code></pre>
 <p>Interactive session:</p>
-<pre><code>socat - TCP:localhost:1970
+<pre><code>socat - TCP:hippiedb.groovy.ch:1970
 </code></pre>
 <hr />
               
